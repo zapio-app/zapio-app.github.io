@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support – Zapio</title>
+<link rel="icon" href="icon.png">
+<style>
+:root { color-scheme: light dark; --bg:#f6f7fb; --card:#ffffff; --text:#14161c; --muted:#5b6170; --accent:#2f6bff; --line:#e3e6ee; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b0d13; --card:#151924; --text:#eef0f6; --muted:#9aa2b5; --accent:#6c9bff; --line:#262c3b; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+header { max-width:860px; margin:0 auto; padding:28px 20px 8px; display:flex; align-items:center; gap:14px; }
+header img { width:52px; height:52px; border-radius:12px; }
+header a.brand { color:var(--text); text-decoration:none; font-weight:700; font-size:22px; }
+nav { margin-left:auto; display:flex; gap:16px; flex-wrap:wrap; font-size:15px; }
+nav a { color:var(--muted); text-decoration:none; } nav a:hover, nav a.active { color:var(--accent); }
+main { max-width:860px; margin:0 auto; padding:8px 20px 48px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px clamp(18px,4vw,40px); }
+h1 { font-size:30px; line-height:1.2; margin:0 0 12px; } h2 { font-size:21px; margin:28px 0 8px; } h3 { font-size:18px; margin:20px 0 6px; }
+p, li { color:var(--text); } ul { padding-left:22px; } li { margin:6px 0; }
+a { color:var(--accent); } code { font:14px ui-monospace, SFMono-Regular, Menlo, monospace; background:var(--line); padding:1px 5px; border-radius:6px; }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px; } th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.hero { text-align:center; padding:40px 10px 10px; } .hero img { width:128px; height:128px; border-radius:28px; box-shadow:0 12px 40px rgba(0,0,0,.25); }
+.hero h1 { font-size:40px; margin:22px 0 6px; } .hero p { color:var(--muted); font-size:19px; margin:0 auto; max-width:560px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:28px; }
+.grid a { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; text-decoration:none; color:var(--text); }
+.grid a strong { display:block; font-size:18px; margin-bottom:4px; } .grid a span { color:var(--muted); font-size:15px; }
+.todo { background:#fff3cd; color:#5c4400; border-radius:10px; padding:2px 6px; }
+footer { max-width:860px; margin:0 auto; padding:0 20px 40px; color:var(--muted); font-size:14px; display:flex; gap:16px; flex-wrap:wrap; }
+footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+<header><img src="icon.png" alt=""><a class="brand" href="index.html">Zapio</a>
+<nav><a href="index.html">Start</a><a href="datenschutz.html">Datenschutz</a><a href="support.html" class="active">Support</a><a href="impressum.html">Impressum</a><a href="en/support.html" lang="en">English</a></nav></header>
+<main><div class="card"><h1>Support</h1><p>Fragen, Probleme oder Wünsche? Schreib uns an <a href="mailto:zapio.app@proton.me">zapio.app@proton.me</a> – wir antworten in der Regel innerhalb von zwei Werktagen. Viele Antworten stehen auch direkt in der App unter Einstellungen → „Hilfe und Tipps“.</p><h2>Häufige Fragen</h2><h3>Wie richte ich meinen Zugang ein?</h3><p>Beim ersten Start „Zugang hinzufügen“: Playlist-Link (M3U) einfügen oder Server, Benutzername und Passwort eines Xtream-Zugangs eintragen. Zapio erkennt die Art selbst. Ohne Zugang: „Mit freien Sendern ausprobieren“.</p><h3>Beim Umschalten heißt es „Zugang auf einem anderen Gerät genutzt“.</h3><p>Die meisten Zugänge erlauben nur eine Wiedergabe gleichzeitig. Läuft auf einem anderen Gerät etwas, sperrt der Anbieter. Häufige Ursache auf dem iPhone ist iCloud Privat-Relay: für dein WLAN „IP-Adresse verbergen“ ausschalten. Auch ein VPN kann stören.</p><h3>Es gibt nur Ton, kein Bild.</h3><p>Manche Sender senden in einem Format, das der Apple-Player nicht zeigt. Zapio wechselt dann von selbst zum eingebauten VLC-Player.</p><h3>Warum gibt es bei manchen Filmen kein Bild-in-Bild?</h3><p>Bild-in-Bild und AirPlay gehen mit dem Apple-Player (MP4, HLS). MKV-Dateien spielt Zapio über VLC – dort gibt es kein Bild-in-Bild. Gibt es einen Film auch als MP4, wählt Zapio diese Fassung.</p><h3>Kauf wiederherstellen</h3><p>Neues Gerät oder neu installiert: Einstellungen → Vollversion → „Kauf wiederherstellen“. Es gilt die Apple-ID, mit der gekauft wurde.</p><h3>Fehler melden</h3><p>In der App: Einstellungen → Diagnose → „Ergebnis kopieren“ und an uns schicken. Benutzername und Passwort sind darin durch Platzhalter ersetzt.</p></div></main>
+<footer><span>© 2026 Zapio</span><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></footer>
+</body>
+</html>
