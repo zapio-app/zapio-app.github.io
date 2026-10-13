@@ -2,142 +2,91 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Datenschutz – Zapio</title>
-<meta name="description" content="Zapio macht aus deinem IPTV-Zugang ein Erlebnis wie am Fernseher: Sender wechseln in Sekundenbruchteilen, ein Programmführer, der mitdenkt, und Filme und Serien so übersichtlich wie in der TV-App.">
-<meta name="theme-color" content="#05070d">
-<meta property="og:title" content="Zapio – Fernsehen, wie es sein sollte.">
-<meta property="og:description" content="Zapio macht aus deinem IPTV-Zugang ein Erlebnis wie am Fernseher: Sender wechseln in Sekundenbruchteilen, ein Programmführer, der mitdenkt, und Filme und Serien so übersichtlich wie in der TV-App.">
+<meta name="description" content="Datenschutzerklärung für Zapio und diese Website: kein Konto, keine Werbung, kein Tracking – was auf dem Gerät bleibt und mit wem die App spricht.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://zapio-app.github.io/datenschutz.html">
+<link rel="alternate" hreflang="de" href="https://zapio-app.github.io/datenschutz.html">
+<link rel="alternate" hreflang="en" href="https://zapio-app.github.io/en/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://zapio-app.github.io/datenschutz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zapio">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Datenschutz – Zapio">
+<meta property="og:description" content="Datenschutzerklärung für Zapio und diese Website: kein Konto, keine Werbung, kein Tracking – was auf dem Gerät bleibt und mit wem die App spricht.">
+<meta property="og:url" content="https://zapio-app.github.io/datenschutz.html">
 <meta property="og:image" content="https://zapio-app.github.io/img/og.jpg">
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<style>
-:root { color-scheme: dark; --bg:#05070d; --text:#f3f5fb; --muted:#9ba4b9; --soft:#c9cfdd; --accent:#5b8cff; --accent2:#9a6bff;
-        --card:rgba(255,255,255,.035); --card2:rgba(255,255,255,.06); --line:rgba(255,255,255,.09); --radius:22px; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; color:var(--text); background:var(--bg);
-       background-image: radial-gradient(1200px 700px at 75% -10%, rgba(91,140,255,.22), transparent 60%),
-                         radial-gradient(900px 600px at -10% 20%, rgba(154,107,255,.12), transparent 60%);
-       background-repeat:no-repeat; font:17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-       -webkit-font-smoothing:antialiased; }
-a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
-/* Navigation */
-.nav { position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(18px); -webkit-backdrop-filter:saturate(180%) blur(18px);
-       background:rgba(5,7,13,.72); border-bottom:1px solid var(--line); }
-.nav .wrap { display:flex; align-items:center; gap:14px; height:64px; }
-.brand { display:flex; align-items:center; gap:10px; color:var(--text); font-weight:700; font-size:19px; letter-spacing:-.01em; }
-.brand:hover { text-decoration:none; } .brand img { width:30px; height:30px; border-radius:8px; }
-.nav nav { margin-left:auto; display:flex; gap:22px; font-size:15px; flex-wrap:wrap; }
-.nav nav a { color:var(--muted); } .nav nav a:hover, .nav nav a.active { color:var(--text); text-decoration:none; }
-/* Hero */
-.hero { display:grid; grid-template-columns:1.05fr 1fr; gap:40px; align-items:center; padding:72px 0 40px; }
-.eyebrow { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:var(--card2);
-           border:1px solid var(--line); color:var(--soft); font-size:14px; font-weight:500; }
-.eyebrow .dot { width:8px; height:8px; border-radius:50%; background:#3ddc84; box-shadow:0 0 12px #3ddc84; }
-h1.title { font-size:clamp(42px,6vw,74px); line-height:1.02; letter-spacing:-.035em; margin:22px 0 18px; font-weight:800;
-           background:linear-gradient(180deg,#fff 30%,#b9c6ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.lead { font-size:clamp(18px,2vw,21px); color:var(--soft); max-width:540px; margin:0 0 30px; }
-.buttons { display:flex; gap:12px; flex-wrap:wrap; }
-.btn { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:14px; font-weight:600; font-size:16px; }
-.btn:hover { text-decoration:none; } .btn.primary { background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; box-shadow:0 10px 30px rgba(91,140,255,.35); }
-.btn.ghost { background:var(--card2); color:var(--text); border:1px solid var(--line); }
-.phones { position:relative; height:620px; isolation:isolate; }
-.phone { position:absolute; width:250px; border-radius:42px; padding:9px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-         box-shadow:0 30px 80px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.phone img { display:block; width:100%; border-radius:34px; }
-.phone.p1 { left:0; top:70px; transform:rotate(-7deg); } .phone.p2 { left:50%; top:0; transform:translateX(-50%); z-index:2; width:270px; }
-.phone.p3 { right:0; top:70px; transform:rotate(7deg); }
-/* Sections */
-section.block { padding:80px 0; } .kicker { color:var(--accent); font-weight:600; font-size:15px; letter-spacing:.02em; text-transform:uppercase; }
-h2.head { font-size:clamp(32px,4.2vw,52px); line-height:1.08; letter-spacing:-.03em; margin:10px 0 16px; font-weight:800; }
-.sub { color:var(--soft); font-size:19px; max-width:640px; }
-.center { text-align:center; } .center .sub { margin:0 auto; }
-.row { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:56px 0; }
-.row.flip .media { order:2; }
-.row .media { display:flex; justify-content:center; position:relative; isolation:isolate; }
-.row .media:before, .phones:before { content:""; position:absolute; z-index:-1; inset:12% 8%; border-radius:50%;
-  background:radial-gradient(closest-side, rgba(91,140,255,.38), rgba(154,107,255,.12) 60%, transparent); filter:blur(30px); }
-.row .media .phone { position:relative; width:270px; transform:none; }
-.row h3 { font-size:clamp(26px,3vw,36px); letter-spacing:-.02em; margin:8px 0 12px; line-height:1.15; }
-.row p { color:var(--soft); font-size:18px; margin:0 0 14px; }
-.ticks { list-style:none; padding:0; margin:16px 0 0; } .ticks li { padding-left:30px; position:relative; margin:9px 0; color:var(--soft); }
-.ticks li:before { content:""; position:absolute; left:0; top:7px; width:18px; height:18px; border-radius:6px;
-                   background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-mask:none; }
-.ticks li:after { content:""; position:absolute; left:6px; top:10px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
-.wide { margin-top:44px; border-radius:30px; padding:10px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-        box-shadow:0 40px 100px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.wide img { display:block; width:100%; border-radius:22px; }
-.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
-.tile { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
-.tile .ico { width:46px; height:46px; border-radius:13px; display:grid; place-items:center; margin-bottom:16px; color:#fff; }
-.tile .ico svg { width:24px; height:24px; } .tile h4 { margin:0 0 6px; font-size:19px; } .tile p { margin:0; color:var(--muted); font-size:16px; }
-.c1 { background:linear-gradient(135deg,#3b82f6,#2563eb); } .c2 { background:linear-gradient(135deg,#a855f7,#7c3aed); }
-.c3 { background:linear-gradient(135deg,#f97316,#ea580c); } .c4 { background:linear-gradient(135deg,#22c55e,#16a34a); }
-.c5 { background:linear-gradient(135deg,#ec4899,#db2777); } .c6 { background:linear-gradient(135deg,#06b6d4,#0891b2); }
-.price { margin-top:20px; border-radius:30px; padding:56px 40px; text-align:center; border:1px solid var(--line);
-         background:radial-gradient(600px 300px at 50% 0%, rgba(91,140,255,.25), transparent 70%), var(--card); }
-.price .big { font-size:clamp(34px,5vw,60px); font-weight:800; letter-spacing:-.03em; margin:8px 0 10px; }
-.pills { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:26px; }
-.pills span { padding:9px 16px; border-radius:999px; background:var(--card2); border:1px solid var(--line); color:var(--soft); font-size:15px; }
-.tv { color:var(--soft); font-size:15px; margin-top:22px; }
-.note { color:var(--muted); font-size:14px; max-width:760px; margin:26px auto 0; text-align:center; }
-/* Rechtliches */
-.doc { max-width:780px; margin:56px auto 80px; padding:48px clamp(22px,5vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; }
-.doc h1 { font-size:clamp(28px,4vw,44px); hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; letter-spacing:-.03em; line-height:1.1; margin:0 0 18px; }
-.doc h2 { font-size:22px; margin:38px 0 10px; letter-spacing:-.01em; } .doc h3 { font-size:18px; margin:26px 0 6px; }
-.doc p, .doc li { color:var(--soft); } .doc ul { padding-left:22px; } .doc li { margin:7px 0; } .doc strong { color:var(--text); }
-.doc code { font:14px ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--card2); padding:2px 6px; border-radius:6px; }
-.doc table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; } .doc th, .doc td { text-align:left; padding:9px; border-bottom:1px solid var(--line); vertical-align:top; }
-.todo { background:#5c4400; color:#ffe9a8; border-radius:8px; padding:1px 6px; }
-footer { border-top:1px solid var(--line); margin-top:40px; }
-footer .wrap { display:flex; gap:24px; flex-wrap:wrap; align-items:center; padding:30px 24px 44px; color:var(--muted); font-size:14px; }
-footer nav { display:flex; gap:18px; flex-wrap:wrap; } footer a { color:var(--muted); } footer .credit { flex-basis:100%; font-size:13px; color:#6f778a; }
-@media (max-width: 900px) {
-  .hero { grid-template-columns:1fr; text-align:center; padding-top:48px; } .lead { margin-left:auto; margin-right:auto; } .buttons { justify-content:center; }
-  .phones { height:520px; max-width:520px; margin:0 auto; width:100%; } .phone { width:200px; } .phone.p2 { width:220px; }
-  .row { grid-template-columns:1fr; gap:28px; text-align:center; } .row.flip .media { order:0; } .ticks { display:inline-block; text-align:left; }
-  .grid { grid-template-columns:1fr 1fr; } .nav nav { gap:14px; font-size:14px; }
-}
-@media (max-width: 560px) { .wrap { padding:0 16px; } section.block { padding:48px 0; } .row { padding:32px 0; }
-  .doc { margin:28px auto 48px; padding:30px 20px; border-radius:22px; } .grid { grid-template-columns:1fr; } .phone.p1, .phone.p3 { display:none; } .phones { height:470px; } .nav nav a.hide-s { display:none; } }
-</style>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zapio im Querformat mit der eingebauten Demo: Live-Player mit Standbild aus Big Buck Bunny, Infokarte und Senderleiste">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Datenschutz – Zapio">
+<meta name="twitter:description" content="Datenschutzerklärung für Zapio und diese Website: kein Konto, keine Werbung, kein Tracking – was auf dem Gerät bleibt und mit wem die App spricht.">
+<meta name="twitter:image" content="https://zapio-app.github.io/img/og.jpg">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="icon.png" alt="">Zapio</a><nav><a href="index.html#funktionen" class="hide-s">Funktionen</a><a href="support.html">Support</a><a href="datenschutz.html" class="active">Datenschutz</a><a href="en/privacy.html" lang="en">English</a></nav></div></header>
-<main><div class="wrap"><article class="doc"><h1>Datenschutzerklärung für Zapio</h1>
-<p>Stand: 07.10.2026</p>
-<h2>Verantwortlicher</h2>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="nav"><div class="wrap wrap-wide">
+<a class="brand" href="./"><img src="favicon-64.png" width="26" height="26" alt="">Zapio</a>
+<nav aria-label="Hauptnavigation"><ul><li class="hide-s"><a href="./#funktionen">Funktionen</a></li><li class="hide-s"><a href="./#preis">Preis</a></li><li><a href="support.html">Support</a></li><li class="hide-s"><a href="./#faq">FAQ</a></li><li><a class="lang" href="en/privacy.html" lang="en" hreflang="en">English</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class=""><div class="page-head"><div class="wrap"><p class="kicker">Rechtliches</p><h1>Datenschutz&shy;erklärung für Zapio</h1><p class="meta">Stand: 07.10.2026</p></div></div><div class="wrap"><div class="doc"><nav class="toc" aria-label="Inhalt"><p>Inhalt</p><ol><li><a href="#verantwortlicher">Verantwortlicher</a></li><li><a href="#kurz-gesagt">Kurz gesagt</a></li><li><a href="#was-auf-deinem-geraet-gespeichert-wird">Was auf deinem Gerät gespeichert wird</a></li><li><a href="#sicherungen-und-loeschen">Sicherungen und Löschen</a></li><li><a href="#mit-wem-die-app-spricht">Mit wem die App spricht</a></li><li><a href="#uebermittlung-in-drittlaender-usa">Übermittlung in Drittländer (USA)</a></li><li><a href="#rechtsgrundlagen">Rechtsgrundlagen</a></li><li><a href="#support-anfragen-per-e-mail">Support-Anfragen per E-Mail</a></li><li><a href="#kinder">Kinder</a></li><li><a href="#diese-website">Diese Website</a></li><li><a href="#deine-rechte">Deine Rechte</a></li></ol></nav><article class="prose"><h2 id="verantwortlicher">Verantwortlicher</h2>
 <p>Andreas Klundt, Rieheweg 1, 32469 Petershagen, zapio.app@proton.me</p>
-<h2>Kurz gesagt</h2>
+<h2 id="kurz-gesagt">Kurz gesagt</h2>
 <p>Zapio hat kein eigenes Konto und keinen eigenen Server. Es gibt keine Werbung, keine Analyse, kein Tracking und keine automatischen Absturzberichte an uns. Was du in der App einträgst oder speicherst, bleibt auf deinem Gerät. Damit die App funktioniert, verbindet sie sich direkt mit den unten genannten Diensten. Daten erreichen uns nur, wenn du uns selbst eine Support-Mail schickst (siehe „Support-Anfragen per E-Mail“).</p>
-<h2>Was auf deinem Gerät gespeichert wird</h2>
+<h2 id="was-auf-deinem-geraet-gespeichert-wird">Was auf deinem Gerät gespeichert wird</h2>
 <ul><li><strong>Im Schlüsselbund von iOS:</strong> die Adresse deiner Playlist bzw. dein Xtream-Zugang (Server, Benutzername, Passwort), die Adresse des Programmführers, die PIN des Kindermodus und der Stand von Testphase und Kauf. Diese Einträge sind an dieses Gerät gebunden und wandern nicht auf ein neues Gerät.</li><li><strong>In der Katalog-Datenbank der App:</strong> Senderlisten, Filme, Serien, Programmdaten, Favoriten, Fortschritt beim Schauen und zwischengespeicherte Angaben von TMDB. Dazu gehören die Stream-Adressen aller Sender und Titel. Bei Xtream-Zugängen enthalten diese Adressen – so gibt es das Format der Anbieter vor – deinen Benutzernamen und dein Passwort. Die Datenbank liegt nur im geschützten Bereich der App („Sandbox“, Ordner Application Support) und ist mit dem Datenschutz von iOS verschlüsselt, solange das Gerät nach einem Neustart noch nicht entsperrt wurde.</li><li><strong>In den Einstellungen der App:</strong> deine Einstellungen, der Suchverlauf, Erinnerungen, gemerkte Sendungen, ausgeblendete Sprachen und gesperrte Kategorien.</li><li><strong>Als Dateien:</strong> Downloads von Filmen und Folgen, Standbilder der zuletzt gesehenen Sender (im Zwischenspeicher, den iOS selbst leeren kann) und ein Wiedergabe-Protokoll für die Fehlersuche (höchstens etwa 200 KB, ohne Benutzername und Passwort; es kann die gekürzte öffentliche IP-Adresse aus der Netzwerkprüfung enthalten, z. B. „93.184.x.x“). Dazu kommen Kurzfassungen der Absturz- und Hängerberichte, die iOS auf dem Gerät erfasst und der App übergibt (MetricKit), in den Dateien diagnostics.log und diagnostics-last.json (zusammen höchstens etwa 1 MB): Zeitpunkt, App-Build, iOS-Version, Gerätetyp, Art und Code der Ausnahme bzw. Dauer des Hängers und – nur in diagnostics-last.json – der technische Aufrufstapel des letzten Berichts, ohne Zugangsdaten.</li></ul>
 <p>Zapio überträgt diese Daten nicht an uns.</p>
-<h2>Sicherungen und Löschen</h2>
+<h2 id="sicherungen-und-loeschen">Sicherungen und Löschen</h2>
 <p>Die Katalog-Datenbank, die Einstellungen, das Wiedergabe-Protokoll und die Absturz- und Hängerberichte (diagnostics.log, diagnostics-last.json) sind wie bei anderen Apps Teil deiner Gerätesicherung (iCloud-Backup oder Backup auf dem Computer) – und damit auch die Stream-Adressen mit den Xtream-Zugangsdaten. iCloud-Backups verschlüsselt Apple; für Backups auf dem Computer empfehlen wir die Option „Lokales Backup verschlüsseln“. Downloads und Standbilder sind von der Sicherung ausgenommen.</p>
 <p>Gespeichert bleibt alles, bis du es löschst: Entfernst du eine Quelle in den Einstellungen, löscht die App ihren Katalog mit allen Stream-Adressen, ihren Programmführer, ihre Zugangsdaten, gemerkte Sendungen und Downloads. Favoriten und Fortschritt (nur die Kennungen der Titel, ohne Adressen) bleiben stehen, damit sie beim erneuten Einrichten derselben Quelle wieder da sind. Den Zwischenspeicher von TMDB leerst du unter Einstellungen → „Zwischenspeicher leeren“. Vergangene Programmdaten löscht die App laufend selbst. Löschst du die App, entfernt iOS alle ihre Daten.</p>
-<h2>Mit wem die App spricht</h2>
+<h2 id="mit-wem-die-app-spricht">Mit wem die App spricht</h2>
 <p>Bei jeder Verbindung sieht der jeweilige Server – wie bei jeder Internetverbindung – deine IP-Adresse, den Zeitpunkt und technische Angaben zur Anfrage. Zapio sendet an keinen dieser Dienste Kennungen deines Geräts oder Angaben zu deiner Person.</p>
 <ul><li><strong>Dein Anbieter</strong> (die Server, deren Adresse du einträgst): beim Laden von Senderliste, Katalog und Programmführer und beim Abspielen. Übermittelt werden deine Zugangsdaten und die gewählten Sender und Titel. Zweck: die Wiedergabe, die du selbst einrichtest. Dasselbe gilt für eine eigene Programmführer-Adresse, die du einträgst.</li><li><strong>Bilder aus deiner Liste:</strong> Senderlogos und Poster lädt Zapio von den Adressen, die in deiner Liste stehen. Übermittelt wird nur der Abruf des Bildes.</li><li><strong>The Movie Database (TMDB)</strong>, api.themoviedb.org und image.tmdb.org: wenn Film- und Serienreihen angezeigt werden (für jedes sichtbare Poster) und beim Öffnen von Film- und Serienseiten. Übermittelt werden Titel und ggf. Erscheinungsjahr des Films bzw. der Serie und die Sprache der App. Poster und Bilder kommen von image.tmdb.org. Abschaltbar unter Einstellungen → „Poster und Infos laden“.</li><li><strong>iptv-org</strong> (iptv-org.github.io, GitHub Pages): höchstens einmal im Monat die öffentliche Senderdatenbank, wenn deinem Anbieter Senderlogos fehlen, und die freie Senderliste bei „Weitere freie Sender laden (iptv-org)“. Die Logos selbst kommen von den Bildadressen, die in dieser Datenbank stehen. Übermittelt wird nur der Abruf.</li><li><strong>Demo, freie Sender und offene Filme:</strong> Die Senderliste und das Programm der Demo („Mit freien Sendern ausprobieren“) liegen in der App. Ihre Teststreams kommen von Apple (devstreaming-cdn.apple.com) und Mux (test-streams.mux.dev). Zur Demo und zur iptv-org-Liste gehören die offenen Filme der Blender Foundation: Sie kommen von download.blender.org und upload.wikimedia.org, ihre Poster von upload.wikimedia.org – die Poster lädt die App, sobald die Demo oder die iptv-org-Liste angezeigt wird. Nach „Weitere freie Sender laden (iptv-org)“ kommen die Streams der Sender direkt von deren Servern (die Adressen stehen in der öffentlichen Liste von iptv-org). Übermittelt wird nur der Abruf des gewählten Senders, Films oder Bildes.</li><li><strong>api.ipify.org:</strong> im Wiedergabe-Selbsttest (Einstellungen → „Diagnose“), bei „Netzwerk prüfen“ in der Hilfe und automatisch höchstens einmal je App-Start, wenn dein Anbieter beim Umschalten sperrt. Die automatische Prüfung schaltest du unter Einstellungen → „Netzwerk bei Sperre automatisch prüfen“ ab. Die App fragt dreimal kurz nach ihrer öffentlichen IP-Adresse (einmal unverschlüsselt, zweimal verschlüsselt). Weichen die Antworten voneinander ab, ist iCloud Privat-Relay aktiv oder die Adresse wechselt – dann erklärt die App, was hilft. Die Antwort enthält nur die IP-Adresse; Zapio zeigt sie gekürzt an und schickt sie nirgendwohin.</li><li><strong>YouTube:</strong> Tippst du auf „Trailer“, öffnet sich das Video in der YouTube-App oder im Browser. Dort gilt die Datenschutzerklärung von Google.</li><li><strong>Apple:</strong> Testphase und Kauf laufen über den App Store (StoreKit). Die Bezahlung wickelt Apple ab; Zapio erfährt nur, ob Testphase und Vollversion vorliegen. Siri, Spotlight-Suche, Widgets und Erinnerungen nutzen Funktionen von iOS auf deinem Gerät.</li></ul>
 <p>TMDB, GitHub, ipify, Apple (Teststreams), Mux, die Blender Foundation, Wikimedia und die Server der freien Sender erhalten keine Zugangsdaten und nichts über deine Senderliste. Für ihre eigene Verarbeitung gelten ihre Datenschutzerklärungen.</p>
-<h2>Übermittlung in Drittländer (USA)</h2>
+<h2 id="uebermittlung-in-drittlaender-usa">Übermittlung in Drittländer (USA)</h2>
 <p>Einige der genannten Dienste haben ihren Sitz oder ihre Server außerhalb der EU, vor allem in den USA: TMDB (api.themoviedb.org, image.tmdb.org), GitHub (iptv-org.github.io), ipify (api.ipify.org), die Wikimedia Foundation (upload.wikimedia.org), Apple (devstreaming-cdn.apple.com), Mux (test-streams.mux.dev) und Google (YouTube). Wo dein Anbieter, eine eigene Programmführer-Adresse oder die Server der freien Sender stehen, hängt von deiner Wahl ab; sie können überall auf der Welt liegen. Bei diesen Verbindungen erhält der Dienst deine IP-Adresse und die Angaben aus dem Abschnitt oben.</p>
 <p>Ist ein Dienst nach dem EU-US Data Privacy Framework zertifiziert (nachzusehen unter www.dataprivacyframework.gov), beruht die Übermittlung auf dem Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Bei den übrigen Diensten gibt es keinen solchen Beschluss und keine Verträge zwischen uns und dem Dienst: Dein Gerät baut die Verbindung direkt auf, nur wenn du die jeweilige Funktion nutzt. In den USA können Behörden unter Umständen auf Daten zugreifen, ohne dass dir dieselben Rechtsbehelfe wie in der EU zustehen. Wenn du das nicht möchtest, schalte TMDB und die automatische Netzwerkprüfung in den Einstellungen ab und nutze Trailer und freie Sender nicht.</p>
-<h2>Rechtsgrundlagen</h2>
+<h2 id="rechtsgrundlagen">Rechtsgrundlagen</h2>
 <ul><li>Verbindungen zu deinem Anbieter, zu den freien Sendern und offenen Filmen, zu iptv-org und zu Apple dienen den Funktionen, die du in der App nutzt: Art. 6 Abs. 1 lit. b DSGVO.</li><li>Abfragen bei TMDB (Poster und Infos) und bei api.ipify.org (Netzwerkprüfung) beruhen auf unserem berechtigten Interesse, dir Titel verständlich anzuzeigen und Wiedergabeprobleme zu erklären: Art. 6 Abs. 1 lit. f DSGVO. Du kannst TMDB und die automatische Netzwerkprüfung in den Einstellungen abschalten; Selbsttest und „Netzwerk prüfen“ laufen nur, wenn du sie startest.</li><li>Support-Mails: siehe unten.</li></ul>
-<h2>Support-Anfragen per E-Mail</h2>
+<h2 id="support-anfragen-per-e-mail">Support-Anfragen per E-Mail</h2>
 <p>„Support kontaktieren“ (Einstellungen → „Rechtliches &amp; Kontakt“) öffnet eine vorbereitete E-Mail in deiner eigenen Mail-App. Sie enthält neben deinem Text: App-Version, iOS-Version, Gerätemodell, Sprache, die Art deiner Quelle (Xtream, M3U oder freie Sender) und die Anzahl gespeicherter Quellen, ob die Vollversion gekauft ist und ob die Testphase läuft, bis zu fünf Kurzfassungen der letzten Abstürze und Hänger (Zeitpunkt, App-Build, iOS-Version, Gerätetyp, Art und Code der Ausnahme bzw. Dauer des Hängers) und die letzten 20 Wiedergabe-Ereignisse (zum Beispiel Sender- und Filmtitel, Name des Anbieter-Servers, Fehlercodes und ggf. die gekürzte IP-Adresse). Benutzername und Passwort sind darin entfernt, die Adresse deiner Quelle steht nicht darin.</p>
 <p>Du siehst die Mail vor dem Senden, kannst alles ändern oder löschen und entscheidest selbst, ob du sie abschickst. Gesendet wird über deinen eigenen Mail-Anbieter. Dasselbe gilt, wenn du unter „Diagnose“ das Ergebnis des Selbsttests teilst; es enthält zusätzlich deine gekürzte IP-Adresse und bis zu zehn Kurzfassungen von Abstürzen und Hängern. Mit „Berichte teilen“ unter „Abstürze und Hänger“ teilst du die Kurzfassungen und den letzten vollständigen Bericht von iOS (technischer Aufrufstapel, ohne Zugangsdaten).</p>
 <p>Schickst du uns eine Mail, erhalten wir deine E-Mail-Adresse, deinen Text und die Diagnose. Wir nutzen sie nur, um deine Anfrage zu beantworten und den Fehler zu beheben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (deine Anfrage zur App) und Art. 6 Abs. 1 lit. f DSGVO (unser Interesse, Fehler in der App zu beheben). Wir löschen die Mail, sobald die Anfrage erledigt ist, spätestens zwölf Monate nach dem letzten Kontakt, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
-<h2>Kinder</h2>
+<h2 id="kinder">Kinder</h2>
 <p>Der Kindermodus beschränkt, was angezeigt wird, und nimmt die Einträge von Zapio aus der Spotlight-Suche des iPhones, solange er an ist. Er erhebt keine Daten über Kinder.</p>
-<h2>Deine Rechte</h2>
+<h2 id="diese-website">Diese Website</h2><p>Dieser Abschnitt gilt für die Website, die du gerade liest. Sie ist eine statische Seite ohne Konto, Formulare oder Kommentarfunktion.</p>
+<ul>
+<li><strong>Hosting bei GitHub Pages:</strong> Die Website liegt bei GitHub Pages, einem Dienst der GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, USA. Bei jedem Aufruf verarbeitet GitHub in Server-Protokollen deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite und Angaben deines Browsers (z. B. Browsertyp und Betriebssystem), um die Seite auszuliefern und vor Missbrauch und Angriffen zu schützen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist eine sichere und erreichbare Website. Wie lange diese Protokolle gespeichert werden, regelt GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</li>
+<li><strong>Übermittlung in die USA:</strong> GitHub ist nach dem EU-US Data Privacy Framework zertifiziert (nachzusehen unter www.dataprivacyframework.gov). Die Übermittlung beruht auf dem Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).</li>
+<li><strong>Keine Cookies, keine Analyse, keine fremden Inhalte:</strong> Die Website setzt keine Cookies, nutzt keine Analyse- oder Statistikdienste und lädt keine Schriften, Skripte, Videos oder andere Inhalte von fremden Servern. Wir werten keine Besucherdaten aus.</li>
+<li><strong>E-Mail-Links:</strong> Ein Klick auf eine E-Mail-Adresse öffnet deine eigene Mail-App; dabei wird nichts automatisch gesendet. Schreibst du uns, gilt der Abschnitt <a href="#support-anfragen-per-e-mail">Support-Anfragen per E-Mail</a>.</li>
+</ul>
+<h2 id="deine-rechte">Deine Rechte</h2>
 <p><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Verarbeitungen, die auf Art. 6 Abs. 1 lit. f DSGVO beruhen, kannst du jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben. In der App geht das ohne Nachricht an uns: Einstellungen → „Poster und Infos laden“ aus beendet alle Abfragen bei TMDB, Einstellungen → „Netzwerk bei Sperre automatisch prüfen“ aus beendet die automatische Abfrage bei api.ipify.org. Selbsttest und „Netzwerk prüfen“ laufen nur, wenn du sie selbst startest. Einer Verarbeitung deiner Support-Mail kannst du per E-Mail an zapio.app@proton.me widersprechen.</p>
-<p>Aus der App selbst speichern wir keine Daten über dich. Hast du uns eine Support-Mail geschickt, hast du das Recht auf Auskunft, Berichtigung und Löschung dieser Daten, auf Einschränkung der Verarbeitung und auf Datenübertragbarkeit, und du kannst der Verarbeitung widersprechen (Art. 15–21 DSGVO). Bei Fragen: zapio.app@proton.me. Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p></article></div></main>
-<footer><div class="wrap"><a class="brand" href="index.html"><img src="icon.png" alt="">Zapio</a>
-<nav><a href="support.html">Support</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
-<span>© 2026 Zapio</span><span class="credit">Bilder aus den offenen Filmen Sintel, Tears of Steel und Big Buck Bunny: © Blender Foundation | blender.org (CC BY). Apple, iPhone und App Store sind Marken der Apple Inc.</span></div></footer>
+<p>Aus der App selbst speichern wir keine Daten über dich. Hast du uns eine Support-Mail geschickt, hast du das Recht auf Auskunft, Berichtigung und Löschung dieser Daten, auf Einschränkung der Verarbeitung und auf Datenübertragbarkeit, und du kannst der Verarbeitung widersprechen (Art. 15–21 DSGVO). Bei Fragen: zapio.app@proton.me. Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p></article></div></div></div>
+</main>
+<footer>
+<div class="wrap wrap-wide">
+  <div class="top">
+    <div class="brandcol"><a class="brand" href="./"><img src="favicon-64.png" width="24" height="24" alt="">Zapio</a><p class="tag">Dein Fernsehen. Auf dem iPhone.</p></div>
+    <div class="col"><h2>Produkt</h2><a href="./#funktionen">Funktionen</a><a href="./#preis">Preis</a><a href="./#faq">FAQ</a></div>
+    <div class="col"><h2>Hilfe</h2><a href="support.html">Support</a><a href="mailto:zapio.app@proton.me">E-Mail schreiben</a></div>
+    <div class="col"><h2>Rechtliches</h2><a href="impressum.html">Impressum</a><a href="datenschutz.html" aria-current="page">Datenschutz</a></div>
+    <div class="col"><h2>Sprache</h2><a href="en/privacy.html" lang="en" hreflang="en">English</a></div>
+  </div>
+  <div class="legal"><p>Zapio ist ein Abspielprogramm und bietet selbst keine Sender, Filme oder Serien an. Für eigene Inhalte brauchst du eine Playlist oder einen Zugang deines Anbieters. Zum Ausprobieren gibt es eine eingebaute Demo mit öffentlichen Teststreams und vier offenen Filmen.</p><p>Demo‑Filme Sintel, Tears of Steel, Big Buck Bunny und Elephants Dream: © Blender Foundation | blender.org, Lizenz <a href="https://creativecommons.org/licenses/by/3.0/deed.de">CC BY 3.0</a> (Elephants Dream: <a href="https://creativecommons.org/licenses/by/2.5/deed.de">CC BY 2.5</a>).</p><p>Apple, iPhone, Apple TV, AirPlay, Face ID, iCloud, Siri, Spotlight, tvOS und App Store sind Marken der Apple Inc., eingetragen in den USA und anderen Ländern. iOS ist eine Marke oder eingetragene Marke von Cisco in den USA und anderen Ländern und wird unter Lizenz verwendet. VLC ist eine Marke von VideoLAN. Zapio nutzt MobileVLCKit (LGPL) und steht in keiner Verbindung zu VideoLAN oder Apple.</p><p>© 2026 Andreas Klundt</p></div>
+</div>
+</footer>
+
 </body>
 </html>

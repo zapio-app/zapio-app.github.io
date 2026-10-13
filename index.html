@@ -2,126 +2,180 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zapio – Fernsehen, wie es sein sollte</title>
-<meta name="description" content="Zapio macht aus deinem IPTV-Zugang ein Erlebnis wie am Fernseher: Sender wechseln in Sekundenbruchteilen, ein Programmführer, der mitdenkt, und Filme und Serien so übersichtlich wie in der TV-App.">
-<meta name="theme-color" content="#05070d">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zapio – IPTV-Player für iPhone</title>
+<meta name="description" content="Zapio spielt deine eigenen IPTV-Playlists (M3U, Xtream) ab: Umschalten mit Standbild, Programmführer, Archiv, Suche im Programm, Downloads. Kein Konto, kein Abo, kein Tracking.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://zapio-app.github.io/">
+<link rel="alternate" hreflang="de" href="https://zapio-app.github.io/">
+<link rel="alternate" hreflang="en" href="https://zapio-app.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://zapio-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zapio">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Zapio – Fernsehen, wie es sein sollte.">
-<meta property="og:description" content="Zapio macht aus deinem IPTV-Zugang ein Erlebnis wie am Fernseher: Sender wechseln in Sekundenbruchteilen, ein Programmführer, der mitdenkt, und Filme und Serien so übersichtlich wie in der TV-App.">
+<meta property="og:description" content="Zapio spielt deine eigenen IPTV-Playlists (M3U, Xtream) ab: Umschalten mit Standbild, Programmführer, Archiv, Suche im Programm, Downloads. Kein Konto, kein Abo, kein Tracking.">
+<meta property="og:url" content="https://zapio-app.github.io/">
 <meta property="og:image" content="https://zapio-app.github.io/img/og.jpg">
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<style>
-:root { color-scheme: dark; --bg:#05070d; --text:#f3f5fb; --muted:#9ba4b9; --soft:#c9cfdd; --accent:#5b8cff; --accent2:#9a6bff;
-        --card:rgba(255,255,255,.035); --card2:rgba(255,255,255,.06); --line:rgba(255,255,255,.09); --radius:22px; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; color:var(--text); background:var(--bg);
-       background-image: radial-gradient(1200px 700px at 75% -10%, rgba(91,140,255,.22), transparent 60%),
-                         radial-gradient(900px 600px at -10% 20%, rgba(154,107,255,.12), transparent 60%);
-       background-repeat:no-repeat; font:17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-       -webkit-font-smoothing:antialiased; }
-a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
-/* Navigation */
-.nav { position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(18px); -webkit-backdrop-filter:saturate(180%) blur(18px);
-       background:rgba(5,7,13,.72); border-bottom:1px solid var(--line); }
-.nav .wrap { display:flex; align-items:center; gap:14px; height:64px; }
-.brand { display:flex; align-items:center; gap:10px; color:var(--text); font-weight:700; font-size:19px; letter-spacing:-.01em; }
-.brand:hover { text-decoration:none; } .brand img { width:30px; height:30px; border-radius:8px; }
-.nav nav { margin-left:auto; display:flex; gap:22px; font-size:15px; flex-wrap:wrap; }
-.nav nav a { color:var(--muted); } .nav nav a:hover, .nav nav a.active { color:var(--text); text-decoration:none; }
-/* Hero */
-.hero { display:grid; grid-template-columns:1.05fr 1fr; gap:40px; align-items:center; padding:72px 0 40px; }
-.eyebrow { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:var(--card2);
-           border:1px solid var(--line); color:var(--soft); font-size:14px; font-weight:500; }
-.eyebrow .dot { width:8px; height:8px; border-radius:50%; background:#3ddc84; box-shadow:0 0 12px #3ddc84; }
-h1.title { font-size:clamp(42px,6vw,74px); line-height:1.02; letter-spacing:-.035em; margin:22px 0 18px; font-weight:800;
-           background:linear-gradient(180deg,#fff 30%,#b9c6ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.lead { font-size:clamp(18px,2vw,21px); color:var(--soft); max-width:540px; margin:0 0 30px; }
-.buttons { display:flex; gap:12px; flex-wrap:wrap; }
-.btn { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:14px; font-weight:600; font-size:16px; }
-.btn:hover { text-decoration:none; } .btn.primary { background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; box-shadow:0 10px 30px rgba(91,140,255,.35); }
-.btn.ghost { background:var(--card2); color:var(--text); border:1px solid var(--line); }
-.phones { position:relative; height:620px; isolation:isolate; }
-.phone { position:absolute; width:250px; border-radius:42px; padding:9px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-         box-shadow:0 30px 80px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.phone img { display:block; width:100%; border-radius:34px; }
-.phone.p1 { left:0; top:70px; transform:rotate(-7deg); } .phone.p2 { left:50%; top:0; transform:translateX(-50%); z-index:2; width:270px; }
-.phone.p3 { right:0; top:70px; transform:rotate(7deg); }
-/* Sections */
-section.block { padding:80px 0; } .kicker { color:var(--accent); font-weight:600; font-size:15px; letter-spacing:.02em; text-transform:uppercase; }
-h2.head { font-size:clamp(32px,4.2vw,52px); line-height:1.08; letter-spacing:-.03em; margin:10px 0 16px; font-weight:800; }
-.sub { color:var(--soft); font-size:19px; max-width:640px; }
-.center { text-align:center; } .center .sub { margin:0 auto; }
-.row { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:56px 0; }
-.row.flip .media { order:2; }
-.row .media { display:flex; justify-content:center; position:relative; isolation:isolate; }
-.row .media:before, .phones:before { content:""; position:absolute; z-index:-1; inset:12% 8%; border-radius:50%;
-  background:radial-gradient(closest-side, rgba(91,140,255,.38), rgba(154,107,255,.12) 60%, transparent); filter:blur(30px); }
-.row .media .phone { position:relative; width:270px; transform:none; }
-.row h3 { font-size:clamp(26px,3vw,36px); letter-spacing:-.02em; margin:8px 0 12px; line-height:1.15; }
-.row p { color:var(--soft); font-size:18px; margin:0 0 14px; }
-.ticks { list-style:none; padding:0; margin:16px 0 0; } .ticks li { padding-left:30px; position:relative; margin:9px 0; color:var(--soft); }
-.ticks li:before { content:""; position:absolute; left:0; top:7px; width:18px; height:18px; border-radius:6px;
-                   background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-mask:none; }
-.ticks li:after { content:""; position:absolute; left:6px; top:10px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
-.wide { margin-top:44px; border-radius:30px; padding:10px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-        box-shadow:0 40px 100px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.wide img { display:block; width:100%; border-radius:22px; }
-.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
-.tile { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
-.tile .ico { width:46px; height:46px; border-radius:13px; display:grid; place-items:center; margin-bottom:16px; color:#fff; }
-.tile .ico svg { width:24px; height:24px; } .tile h4 { margin:0 0 6px; font-size:19px; } .tile p { margin:0; color:var(--muted); font-size:16px; }
-.c1 { background:linear-gradient(135deg,#3b82f6,#2563eb); } .c2 { background:linear-gradient(135deg,#a855f7,#7c3aed); }
-.c3 { background:linear-gradient(135deg,#f97316,#ea580c); } .c4 { background:linear-gradient(135deg,#22c55e,#16a34a); }
-.c5 { background:linear-gradient(135deg,#ec4899,#db2777); } .c6 { background:linear-gradient(135deg,#06b6d4,#0891b2); }
-.price { margin-top:20px; border-radius:30px; padding:56px 40px; text-align:center; border:1px solid var(--line);
-         background:radial-gradient(600px 300px at 50% 0%, rgba(91,140,255,.25), transparent 70%), var(--card); }
-.price .big { font-size:clamp(34px,5vw,60px); font-weight:800; letter-spacing:-.03em; margin:8px 0 10px; }
-.pills { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:26px; }
-.pills span { padding:9px 16px; border-radius:999px; background:var(--card2); border:1px solid var(--line); color:var(--soft); font-size:15px; }
-.tv { color:var(--soft); font-size:15px; margin-top:22px; }
-.note { color:var(--muted); font-size:14px; max-width:760px; margin:26px auto 0; text-align:center; }
-/* Rechtliches */
-.doc { max-width:780px; margin:56px auto 80px; padding:48px clamp(22px,5vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; }
-.doc h1 { font-size:clamp(28px,4vw,44px); hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; letter-spacing:-.03em; line-height:1.1; margin:0 0 18px; }
-.doc h2 { font-size:22px; margin:38px 0 10px; letter-spacing:-.01em; } .doc h3 { font-size:18px; margin:26px 0 6px; }
-.doc p, .doc li { color:var(--soft); } .doc ul { padding-left:22px; } .doc li { margin:7px 0; } .doc strong { color:var(--text); }
-.doc code { font:14px ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--card2); padding:2px 6px; border-radius:6px; }
-.doc table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; } .doc th, .doc td { text-align:left; padding:9px; border-bottom:1px solid var(--line); vertical-align:top; }
-.todo { background:#5c4400; color:#ffe9a8; border-radius:8px; padding:1px 6px; }
-footer { border-top:1px solid var(--line); margin-top:40px; }
-footer .wrap { display:flex; gap:24px; flex-wrap:wrap; align-items:center; padding:30px 24px 44px; color:var(--muted); font-size:14px; }
-footer nav { display:flex; gap:18px; flex-wrap:wrap; } footer a { color:var(--muted); } footer .credit { flex-basis:100%; font-size:13px; color:#6f778a; }
-@media (max-width: 900px) {
-  .hero { grid-template-columns:1fr; text-align:center; padding-top:48px; } .lead { margin-left:auto; margin-right:auto; } .buttons { justify-content:center; }
-  .phones { height:520px; max-width:520px; margin:0 auto; width:100%; } .phone { width:200px; } .phone.p2 { width:220px; }
-  .row { grid-template-columns:1fr; gap:28px; text-align:center; } .row.flip .media { order:0; } .ticks { display:inline-block; text-align:left; }
-  .grid { grid-template-columns:1fr 1fr; } .nav nav { gap:14px; font-size:14px; }
-}
-@media (max-width: 560px) { .wrap { padding:0 16px; } section.block { padding:48px 0; } .row { padding:32px 0; }
-  .doc { margin:28px auto 48px; padding:30px 20px; border-radius:22px; } .grid { grid-template-columns:1fr; } .phone.p1, .phone.p3 { display:none; } .phones { height:470px; } .nav nav a.hide-s { display:none; } }
-</style>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zapio im Querformat mit der eingebauten Demo: Live-Player mit Standbild aus Big Buck Bunny, Infokarte und Senderleiste">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zapio – Fernsehen, wie es sein sollte.">
+<meta name="twitter:description" content="Zapio spielt deine eigenen IPTV-Playlists (M3U, Xtream) ab: Umschalten mit Standbild, Programmführer, Archiv, Suche im Programm, Downloads. Kein Konto, kein Abo, kein Tracking.">
+<meta name="twitter:image" content="https://zapio-app.github.io/img/og.jpg">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/site.css">
+<script>(function(d,w){if('IntersectionObserver' in w&&w.matchMedia&&!w.matchMedia('(prefers-reduced-motion: reduce)').matches)d.documentElement.classList.add('js');})(document,window);</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zapio", "applicationCategory": "MultimediaApplication", "operatingSystem": "iOS 17 oder neuer", "description": "Zapio spielt deine eigenen IPTV-Playlists (M3U, Xtream) ab: Umschalten mit Standbild, Programmführer, Archiv, Suche im Programm, Downloads. Kein Konto, kein Abo, kein Tracking.", "inLanguage": ["de", "en"], "author": {"@type": "Person", "name": "Andreas Klundt"}, "url": "https://zapio-app.github.io/", "image": "https://zapio-app.github.io/img/og.jpg"}</script>
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="icon.png" alt="">Zapio</a><nav><a href="index.html#funktionen" class="hide-s">Funktionen</a><a href="support.html">Support</a><a href="datenschutz.html" class="hide-s">Datenschutz</a><a href="en/index.html" lang="en">English</a></nav></div></header>
-<main><div class="wrap">
-<section class="hero">
-  <div><span class="eyebrow"><span class="dot"></span>Für iPhone · bald im App Store</span>
-    <h1 class="title">Fernsehen, wie es sein sollte.</h1><p class="lead">Zapio macht aus deinem IPTV-Zugang ein Erlebnis wie am Fernseher: Sender wechseln in Sekundenbruchteilen, ein Programmführer, der mitdenkt, und Filme und Serien so übersichtlich wie in der TV-App.</p>
-    <div class="buttons"><a class="btn primary" href="#funktionen">Funktionen ansehen</a><a class="btn ghost" href="support.html">Hilfe &amp; Support</a></div></div>
-  <div class="phones"><div class="phone p1"><img src="img/1-player.jpg" alt=""></div><div class="phone p2"><img src="img/4-home.jpg" alt="Zapio"></div><div class="phone p3"><img src="img/2-guide.jpg" alt=""></div></div>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="nav"><div class="wrap wrap-wide">
+<a class="brand" href="#main"><img src="favicon-64.png" width="26" height="26" alt="">Zapio</a>
+<nav aria-label="Hauptnavigation"><ul><li class="hide-s"><a href="#funktionen">Funktionen</a></li><li class="hide-s"><a href="#preis">Preis</a></li><li><a href="support.html">Support</a></li><li class="hide-s"><a href="#faq">FAQ</a></li><li><a class="lang" href="en/" lang="en" hreflang="en">English</a></li></ul></nav>
+</div></header>
+<main id="main">
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Für iPhone&nbsp;·&nbsp;Bald im App&nbsp;Store</p>
+    <h1>Fernsehen, wie es sein sollte.</h1>
+    <p class="lead">Zapio spielt deine eigenen IPTV‑Playlists ab – wie am Fernseher. Ohne Konto, ohne Werbung, ohne Tracking.</p>
+    <div class="cta"><a class="btn" href="#funktionen">Funktionen ansehen</a><a class="link" href="support.html">Hilfe &amp; Support</a></div>
+    <p class="note">Zapio bietet selbst keine Sender oder Filme an. Für eigene Inhalte brauchst du eine Playlist oder einen Zugang deines Anbieters.</p>
+  </div>
+  <div class="stage"><div class="frame-land"><picture><source type="image/webp" srcset="img/hero-1200.webp 1200w, img/hero-2400.webp 2400w" sizes="(max-width: 640px) 124vw, min(1240px, 84vw)"><img src="img/hero-1200.jpg" srcset="img/hero-1200.jpg 1200w, img/hero-2400.jpg 2400w" sizes="(max-width: 640px) 124vw, min(1240px, 84vw)" width="1200" height="552" alt="Zapio im Querformat: Live-Player mit „Zapio Demo 6 Kinder“, Standbild aus Big Buck Bunny, Infokarte mit laufender Sendung und Senderleiste mit sieben Demo-Sendern" fetchpriority="high"></picture><span class="glint" aria-hidden="true"></span></div></div>
+  <div class="wrap"><p class="caption meta">Abgebildet: die eingebaute Zapio‑Demo. „Big Buck Bunny“ © Blender Foundation | blender.org</p></div>
+</header>
+
+<section id="funktionen" aria-labelledby="h-why">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">Warum Zapio</p><h2 id="h-why">Drei Dinge, die ein IPTV‑Player können muss.</h2></div>
+    <ul class="pillars reveal"><li><h3>Umschalten wie am Fernseher.</h3><p>Statt Schwarz das letzte Bild: Bei Sendern, die du schon gesehen hast, erscheint es sofort und bleibt, bis das Live‑Bild übernimmt.</p></li><li><h3>Alles an seinem Platz.</h3><p>Startseite mit „Jetzt im TV“ und Weiterschauen, Programmführer über mehrere Tage, eine Suche für Sender, Filme, Serien und Sendungen. Sendernamen ohne Technik‑Kürzel.</p></li><li><h3>Kein Konto. Kein Abo.<br>Kein Tracking.</h3><p>Zugangsdaten bleiben im Schlüsselbund deines iPhones. Zapio hat keinen eigenen Server, keine Werbung und keine Analyse. Einmal kaufen, fertig.</p></li></ul>
+  </div>
 </section>
-<section class="block" id="funktionen"><div class="row"><div class="media"><div class="phone"><img src="img/1-player.jpg" alt="" loading="lazy"></div></div><div><span class="kicker">Umschalten</span><h3>Wischen. Schon läuft der nächste Sender.</h3><p>Zapio zeigt sofort ein Standbild, verbindet im Hintergrund und kennt die Eigenheiten deines Anbieters – auch Zugänge mit nur einem gleichzeitigen Stream.</p><ul class="ticks"><li>Wischen, Pfeile oder Senderleiste</li><li>Zurück zum vorigen Sender mit einem Tipp</li><li>Automatischer Wechsel auf den eingebauten VLC-Player, wenn ein Format es verlangt</li></ul></div></div><div class="row flip"><div class="media"><div class="phone"><img src="img/2-guide.jpg" alt="" loading="lazy"></div></div><div><span class="kicker">Programmführer</span><h3>Was läuft gerade? Was kommt heute Abend?</h3><p>Ein Programmführer über mehrere Tage, mit Archiv und „Von Anfang an“. Verpasstes schaust du nach, Kommendes merkst du dir mit einem Tipp.</p><ul class="ticks"><li>Erinnerung fünf Minuten vor Beginn</li><li>„Immer erinnern“ für ganze Reihen wie den Tatort</li><li>Wochenprogramm für jeden Sender</li></ul></div></div><div class="row"><div class="media"><div class="phone"><img src="img/3-search.jpg" alt="" loading="lazy"></div></div><div><span class="kicker">Suche</span><h3>Eine Suche für alles.</h3><p>Sender, Filme, Serien und Sendungen der nächsten Tage – in einem Feld. Umlaute, Akzente und Schreibweisen findet Zapio trotzdem.</p><ul class="ticks"><li>Wiederholungen zu einer Zeile zusammengefasst</li><li>Direkt einschalten, erinnern oder nachschauen</li></ul></div></div><div class="row flip"><div class="media"><div class="phone"><img src="img/7-kids.jpg" alt="" loading="lazy"></div></div><div><span class="kicker">Familie</span><h3>Für die ganze Familie.</h3><p>Ein Kindermodus mit eigener Auswahl und Fernsehzeit, eine PIN für die Eltern und gesperrte Kategorien, die wirklich überall verschwinden.</p><ul class="ticks"><li>Tageslimit mit sichtbarer Restzeit</li><li>Inhalte für Erwachsene standardmäßig ausgeblendet</li></ul></div></div></section>
-<section class="block center"><span class="kicker">Filme und Serien</span><h2 class="head">Großes Kino. Auch im Querformat.</h2><p class="sub">Poster, Beschreibungen, Fassungen in mehreren Sprachen und Qualitäten, Weiterschauen an der richtigen Stelle – und Downloads für unterwegs.</p>
-  <div class="wide"><img src="img/5-landscape.jpg" alt="" loading="lazy"></div></section>
-<section class="block center"><span class="kicker">Und noch viel mehr</span><h2 class="head">Durchdacht bis ins Detail.</h2><div class="grid" style="text-align:left"><div class="tile"><div class="ico c3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg></div><h4>Downloads</h4><p>Filme und Folgen für unterwegs laden – mit Fortschritt, Tempo und Pause während du schaust.</p></div><div class="tile"><div class="ico c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><rect x="11" y="11" width="8" height="6" rx="1.5"/></svg></div><h4>Bild-in-Bild &amp; AirPlay</h4><p>Weiterschauen, während du andere Apps nutzt, oder aufs große Bild bringen.</p></div><div class="tile"><div class="ico c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16zM10 20a2 2 0 0 0 4 0"/></svg></div><h4>Erinnerungen</h4><p>Nie wieder den Anfang verpassen – für einzelne Sendungen oder ganze Reihen.</p></div><div class="tile"><div class="ico c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h2M7 8v8M11 5v14M15 8v8M19 11v2"/></svg></div><h4>Siri, Widget &amp; Kurzbefehle</h4><p>„Was läuft gerade?“ – fragen, einschalten, weiterschauen.</p></div><div class="tile"><div class="ico c6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></div><h4>Mehrere Zugänge</h4><p>Playlist-Links und Xtream-Zugänge, eigene Programmführer-Adresse, Zeitversatz je Quelle.</p></div><div class="tile"><div class="ico c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div><h4>Privat by Design</h4><p>Kein Konto, keine Werbung, kein Tracking. Deine Daten bleiben auf deinem Gerät.</p></div></div></section>
-<section class="block"><div class="price"><span class="kicker">Fair</span><div class="big">Ein Kauf. Kein Abo.</div><p class="sub" style="margin:0 auto">Sieben Tage alles kostenlos testen. Danach einmal kaufen und für immer nutzen – mit Familienfreigabe.</p><div class="pills"><span>7 Tage kostenlos</span><span>Einmalkauf</span><span>Familienfreigabe</span><span>Keine Werbung</span><span>Kein Tracking</span><span>Kein Konto</span></div><p class="tv">Eine Version für Apple TV ist in Vorbereitung.</p></div>
-  <p class="note">Zapio enthält keine Sender, Filme oder Serien und vermittelt keine. Die App spielt ausschließlich Quellen ab, die du selbst einträgst – zum Ausprobieren gibt es eine eingebaute Demo mit freien Teststreams.</p></section>
-</div></main>
-<footer><div class="wrap"><a class="brand" href="index.html"><img src="icon.png" alt="">Zapio</a>
-<nav><a href="support.html">Support</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
-<span>© 2026 Zapio</span><span class="credit">Bilder aus den offenen Filmen Sintel, Tears of Steel und Big Buck Bunny: © Blender Foundation | blender.org (CC BY). Apple, iPhone und App Store sind Marken der Apple Inc.</span></div></footer>
+
+<section aria-labelledby="h-zap" style="padding-top:0">
+  <div class="wrap chapter">
+    <div class="sec-head reveal"><p class="kicker">Umschalten</p><h2 id="h-zap">Wischen.<br>Schon läuft der&nbsp;nächste&nbsp;Sender.</h2><p class="lead">Nach oben wischen, nach unten wischen – Zapio zeigt das letzte Bild des Senders, sofern du ihn schon gesehen hast, und verbindet im Hintergrund.</p></div>
+    <div class="media"><div class="zapcrop"><div class="frame zap"><picture><source type="image/webp" srcset="img/player-400.webp 400w, img/player-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/player-400.jpg" srcset="img/player-400.jpg 400w, img/player-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Zapio-Player im Hochformat: Standbild aus Tears of Steel, Infokarte „Zapio Demo 7 Kurzfilm – Kurz &amp; gut“ mit Fortschritt und „Von Anfang an“, darunter die Senderleiste"></picture><div class="b" aria-hidden="true"><picture><source type="image/webp" srcset="img/player-b-400.webp 400w, img/player-b-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/player-b-400.jpg" srcset="img/player-b-400.jpg 400w, img/player-b-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt=""></picture></div></div></div><p class="meta shot-credit">„Tears of Steel“ und „Big Buck Bunny“ © Blender Foundation | blender.org</p></div>
+    <ol class="steps"><li class="reveal"><span class="n">01</span><h3>Standbild sofort, Live‑Bild übernimmt.</h3><p>Bei Sendern, die du schon gesehen hast, erscheint beim Wechsel sofort das letzte Bild. Sobald der Stream steht, übernimmt das Live‑Bild.</p></li><li class="reveal"><span class="n">02</span><h3>Senderleiste mit Programm.</h3><p>Wischen, Pfeile oder die Senderleiste – unter jedem Logo steht, was dort gerade läuft. Zurück zum vorigen Sender geht mit einem Tipp.</p></li><li class="reveal"><span class="n">03</span><h3>Fällt eine Fassung aus, wechselt Zapio selbst.</h3><p>Liefert die HD‑, FHD‑ oder HEVC‑Fassung eines Senders gerade nicht, nimmt die App eine andere – automatisch, ohne dass du suchen musst.</p></li></ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-stream">
+  <div class="wrap">
+    <div class="split reveal"><div><p class="kicker">Ein Stream, kein Stress</p><h2 id="h-stream">Zapio kennt die Regeln deines Anbieters.</h2></div><p class="lead">Viele Zugänge erlauben nur eine Wiedergabe gleichzeitig. Zapio gibt Streams sauber frei, wartet nach dem Umschalten, bis der Anbieter die alte Verbindung freigibt, und sagt dir klar, wenn gerade ein anderes Gerät schaut.</p></div>
+    <ul class="facts reveal"><li><h3>Einer nach dem anderen.</h3><p>Live, Film und Download teilen sich den einen Stream – nie zwei auf einmal.</p></li><li><h3>Downloads mit Vorfahrt fürs Bild.</h3><p>Downloads ruhen, während du schaust, und laufen danach von selbst weiter.</p></li><li><h3>Privat‑Relay und VPN erkannt.</h3><p>Blockt der Anbieter wegen iCloud Privat‑Relay oder VPN, nennt Zapio die Ursache und erklärt die Abhilfe.</p></li><li><h3>Selbsttest in der Diagnose.</h3><p>Zugang, Netzwerk, Apple‑Player und VLC werden einzeln geprüft – mit klarem Ergebnis.</p></li></ul>
+  </div>
+</section>
+
+<section aria-labelledby="h-prog">
+  <div class="wrap wrap-wide">
+    <div class="split wide reveal"><div><p class="kicker">Programmführer</p><h2 id="h-prog">Was läuft jetzt?<br>Was kommt heute&nbsp;Abend?</h2></div><p class="lead">Ein Programmführer über mehrere Tage, das Archiv deines Anbieters und eine Suche, die auch Sendungen der nächsten sieben Tage findet. Programmdaten kommen von deinem Anbieter oder aus einer eigenen XMLTV‑Adresse.</p></div>
+    <div class="cards" tabindex="0" role="region" aria-label="Programmführer, Archiv und Suche – Karten zum Blättern"><article class="card reveal"><div class="txt"><h3>Über mehrere Tage.</h3><p>Tagesleiste „Gestern · Heute · Morgen …“, so weit das Programm reicht. Das Wochenprogramm gibt es auch direkt im Player.</p></div><div class="shot"><div class="frame"><picture><source type="image/webp" srcset="img/guide-400.webp 400w, img/guide-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/guide-400.jpg" srcset="img/guide-400.jpg 400w, img/guide-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Programmführer mit Tagesleiste Gestern, Heute, Morgen und Zeitleiste; sieben Demo-Sender mit laufender Sendung und Fortschritt"></picture></div></div></article><article class="card reveal"><div class="txt"><h3>Verpasst? Nachschauen.</h3><p>Bietet dein Anbieter ein Archiv: verpasste Sendungen je Sender, „Von Anfang an“ für die laufende Sendung, Vormerken für kommende.</p></div><div class="shot"><div class="frame"><picture><source type="image/webp" srcset="img/archive-400.webp 400w, img/archive-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/archive-400.jpg" srcset="img/archive-400.jpg 400w, img/archive-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Archiv von „Zapio Demo 5 Kochen“: vergangene Sendungen mit Abspiel-Symbol, die laufende mit „Läuft gerade – von Anfang an“"></picture></div></div></article><article class="card reveal"><div class="txt"><h3>Eine Suche. Für alles.</h3><p>Sender, Filme, Serien und das Programm in einem Feld – mit Erinnerung fünf Minuten vor Beginn. „Immer erinnern“ merkt sich ganze Reihen.</p></div><div class="shot"><div class="frame"><picture><source type="image/webp" srcset="img/search-400.webp 400w, img/search-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/search-400.jpg" srcset="img/search-400.jpg 400w, img/search-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Suche nach „Kochen“: Treffer im Programm mit Erinnerungs-Glocke und weiteren Terminen sowie der Live-Sender Zapio Demo 5 Kochen"></picture></div></div></article></div>
+    <div class="pager" hidden><button type="button" class="arrow prev" aria-label="Vorherige Karte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><div class="dots"></div><button type="button" class="arrow next" aria-label="Nächste Karte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-pair" style="padding-top:0">
+  <div class="wrap wrap-wide">
+    <h2 id="h-pair" class="sr">Filme und Familie</h2>
+    <div class="pair"><article class="card reveal"><div class="txt"><p class="kicker">Filme und Serien</p><h3>Großes Kino.<br>Auch unterwegs.</h3><p>Nach Kategorien geordnet, mit Weiterschauen an der richtigen Stelle und automatisch nächster Folge. Filme und Folgen lädst du in der App und schaust sie offline – sofern dein Anbieter es erlaubt.</p><ul><li>Mehrere Fassungen eines Titels werden eins – Sprache und Format wählst du auf der Filmseite</li><li>Tonspur und Untertitel in deiner Sprache vorgewählt</li><li>Downloads im Hintergrund, standardmäßig nur im WLAN</li></ul></div><div class="shot"><div class="frame"><picture><source type="image/webp" srcset="img/movie-400.webp 400w, img/movie-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/movie-400.jpg" srcset="img/movie-400.jpg 400w, img/movie-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Filmseite „Tears of Steel“ mit Poster, Abspielen- und Laden-Taste sowie weiteren offenen Filmen"></picture></div></div></article><article class="card reveal"><div class="txt"><p class="kicker">Familie</p><h3>Für die ganze Familie.<br>Mit&nbsp;klaren&nbsp;Grenzen.</h3><p>Der Kindermodus zeigt nur Kindersender und Kinderkategorien – überall, auch in Suche und Siri. Auf Wunsch mit Fernsehzeit pro Tag. Beenden nur mit der Eltern‑PIN.</p><ul><li>Fernsehzeit 30 Minuten, 1 oder 2 Stunden pro Tag – die Restzeit steht oben links</li><li>Gesperrte Kategorien verschwinden aus allen Listen, bis die PIN eingegeben wird</li><li>PIN vergessen? Zurücksetzen mit Gerätecode oder Face&nbsp;ID – nach 24 Stunden Wartezeit</li></ul></div><div class="shot"><div class="frame"><picture><source type="image/webp" srcset="img/kids-400.webp 400w, img/kids-800.webp 800w" sizes="(max-width: 860px) 340px, 420px"><img src="img/kids-400.jpg" srcset="img/kids-400.jpg 400w, img/kids-800.jpg 800w" sizes="(max-width: 860px) 340px, 420px" width="400" height="869" alt="Kindermodus: Startseite mit Hinweis „Noch 60 min“, Big Buck Bunny und „Jetzt im TV“ nur mit Zapio Demo 6 Kinder"></picture></div></div></article></div>
+    <p class="meta shot-credit">Abgebildet: die eingebaute Zapio‑Demo. „Tears of Steel“, „Sintel“, „Elephants Dream“ und „Big Buck Bunny“ © Blender Foundation | blender.org</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-details">
+  <div class="wrap wrap-wide">
+    <div class="sec-head reveal"><p class="kicker">Im Alltag</p><h2 id="h-details">Durchdacht bis ins Detail.</h2></div>
+    <ul class="list reveal"><li><h3>Bild‑in‑Bild</h3><p>Vom unteren Rand nach oben wischen – das Bild läuft klein weiter. Mit dem Apple‑Player.</p></li><li><h3>AirPlay</h3><p>Live‑Sender und Filme auf Apple TV oder einen AirPlay‑Fernseher – mit dem Apple‑Player.</p></li><li><h3>Siri und Kurzbefehle</h3><p>„Schalte … in Zapio ein“, „Was kommt heute Abend in Zapio“, „Weiterschauen in Zapio“.</p></li><li><h3>Widget „Jetzt im TV“</h3><p>Klein, mittel oder groß auf dem Home‑Bildschirm. Antippen schaltet ein.</p></li><li><h3>Sperrbildschirm</h3><p>Pause, Weiter und Sender wechseln vom Sperrbildschirm und aus dem Kontrollzentrum.</p></li><li><h3>Mehrere Zugänge</h3><p>Playlists und Xtream‑Zugänge nebeneinander – jeder mit eigenen Favoriten, Weiterschauen und Downloads.</p></li><li><h3>Eingebauter VLC‑Player</h3><p>MKV, AVI, MPEG‑TS und DASH laufen trotzdem – Zapio wechselt von selbst und merkt es sich je Sender.</p></li><li><h3>Sprachen filtern</h3><p>Anbieter mischen oft viele Sprachen. Du wählst deine, der Rest verschwindet.</p></li></ul>
+  </div>
+</section>
+
+<section class="light" aria-labelledby="h-priv">
+  <div class="wrap">
+    <div class="split reveal"><div><p class="kicker">Privatsphäre</p><h2 id="h-priv">Datenschutz ab Werk.</h2></div>
+      <div><p class="lead">Zapio hat kein Konto und keinen eigenen Server. Es gibt keine Werbung, keine Analyse, kein Tracking und keine automatischen Absturzberichte an uns. Die App verbindet sich mit den Servern, die du selbst einträgst – und mit wenigen Diensten, die die Datenschutzerklärung einzeln nennt. Poster‑Infos und die automatische Netzwerkprüfung lassen sich abschalten.</p><p style="margin-top:16px"><a class="link" href="datenschutz.html">Datenschutzerklärung lesen</a></p></div></div>
+    <ul class="trust reveal"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg><h3>Keine Datensammlung.</h3><p>Laut den Datenschutzangaben der App: keine erfassten Daten, kein Tracking.</p></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M15 8l2 2"/></svg><h3>Schlüsselbund statt Cloud.</h3><p>Zugangsdaten sind an dieses Gerät gebunden und wandern nicht mit.</p></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Alles nachlesbar.</h3><p>Die vollständige Datenschutzerklärung steht in der App und hier auf der Website – auch für die Website selbst.</p></li></ul>
+  </div>
+</section>
+
+<section id="preis" aria-labelledby="h-price">
+  <div class="wrap">
+    <div class="split reveal"><div><p class="kicker">Preis</p><h2 id="h-price">Ein Kauf.<br>Kein Abo.</h2></div><p class="lead">Die Demo und die vier offenen Filme sind immer kostenlos. Mit deinem eigenen Anbieter testest du Zapio 7&nbsp;Tage lang – die Testphase startet erst, wenn du sie antippst, und endet von selbst, ohne Abbuchung.</p></div>
+    <article class="plan reveal">
+      <div class="head"><div class="platform"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 5h4"/></svg><div><h3>iPhone</h3><span>iOS&nbsp;17 oder neuer · Deutsch und Englisch</span></div></div><span class="pill">Bald im App&nbsp;Store</span></div>
+      <dl><div><dt>Demo‑Sender und offene Filme</dt><dd>Immer kostenlos</dd></div><div><dt>Mit eigenem Anbieter</dt><dd>7&nbsp;Tage kostenlos testen</dd></div><div><dt>Danach</dt><dd>Einmalkauf, kein Abo</dd></div><div><dt>Werbung, Konto, Tracking</dt><dd>Keins davon</dd></div><div><dt>Quellen und Player</dt><dd>M3U, Xtream · Apple‑Player und VLC</dd></div></dl>
+    </article>
+    <div class="tvline"><h3>Apple&nbsp;TV</h3><p>Der Fernseher ist der natürliche Ort für Live‑TV. Eine Version für Apple&nbsp;TV ist in Vorbereitung.</p></div>
+    <p class="meta plans-foot">Kauf über den App&nbsp;Store. Auf einem neuen iPhone stellst du ihn mit derselben Apple‑ID wieder her. Den Preis zeigt der App&nbsp;Store.</p>
+  </div>
+</section>
+
+<section class="band faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">Fragen</p><h2 id="h-faq">Kurz beantwortet.</h2></div>
+    <div class="faq-list reveal"><details><summary>Bringt Zapio Sender mit?</summary><p>Nur zum Ausprobieren. Zapio ist ein Player und bietet selbst keine Sender an. Für eigene Inhalte brauchst du eine Playlist (M3U) oder einen Zugang deines Anbieters (Xtream). Die eingebaute Demo hat sieben erfundene Sender mit öffentlichen Teststreams und vier offene Filme.</p></details><details><summary>Wie richte ich meinen Zugang ein?</summary><p>Playlist‑Link einfügen oder Server, Benutzername und Passwort eintragen – Zapio erkennt die Art selbst. Die Zugangsdaten bleiben im Schlüsselbund deines iPhones.</p></details><details><summary>Was kostet Zapio?</summary><p>Die Demo ist immer kostenlos. Mit deinem Anbieter testest du 7&nbsp;Tage kostenlos, danach ist die Vollversion ein einmaliger Kauf im App&nbsp;Store – kein Abo. Den Preis zeigt der App&nbsp;Store.</p></details><details><summary>Mein Zugang erlaubt nur einen Stream. Geht das?</summary><p>Ja, dafür ist Zapio gebaut. Live, Film und Download teilen sich die eine Verbindung, und beim Umschalten wartet die App, bis der Anbieter die alte Verbindung freigibt. Läuft auf einem anderen Gerät etwas, sagt Zapio es dir.</p></details><details><summary>Funktionieren Bild‑in‑Bild und AirPlay?</summary><p>Ja, mit dem Apple‑Player – also bei Live‑Sendern (HLS) und Filmen im MP4‑Format. Formate wie MKV spielt Zapio über den eingebauten VLC‑Player; dort gibt es kein Bild‑in‑Bild und kein AirPlay. Gibt es einen Film auch als MP4, wählt Zapio diese Fassung vor.</p></details><details><summary>Kann ich verpasste Sendungen nachschauen?</summary><p>Wenn dein Anbieter ein Archiv anbietet, ja: „Verpasste Sendungen“ je Sender, „Von Anfang an“ im Player, und kommende Sendungen lassen sich vormerken. Wie weit das Archiv zurückreicht, bestimmt der Anbieter.</p></details><details><summary>Sammelt Zapio Daten?</summary><p>Nein. Kein Konto, keine Werbung, keine Analyse, kein Tracking. Was du einträgst, bleibt auf deinem Gerät. Welche Server die App kontaktiert, nennt die Datenschutzerklärung einzeln. Poster‑Infos und die automatische Netzwerkprüfung lassen sich abschalten.</p></details><details><summary>Auf welchen Geräten läuft Zapio?</summary><p>Auf dem iPhone ab iOS&nbsp;17, auf Deutsch und Englisch. Eine Version für Apple&nbsp;TV ist in Vorbereitung.</p></details></div>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="h-end">
+  <div class="wrap reveal">
+    <img class="icon" src="img/icon-240.png" width="120" height="120" alt="">
+    <h2 id="h-end">Bald auf deinem iPhone.</h2>
+    <p class="lead">Zapio kommt bald in den App&nbsp;Store. Bis dahin: Lies, was die App kann, oder schreib uns, was du dir wünschst.</p>
+    <div class="cta"><span class="pill">Bald im App&nbsp;Store</span><a class="link" href="support.html">Support &amp; Kontakt</a></div>
+  </div>
+</section>
+</main>
+<footer>
+<div class="wrap wrap-wide">
+  <div class="top">
+    <div class="brandcol"><a class="brand" href="./"><img src="favicon-64.png" width="24" height="24" alt="">Zapio</a><p class="tag">Dein Fernsehen. Auf dem iPhone.</p></div>
+    <div class="col"><h2>Produkt</h2><a href="#funktionen">Funktionen</a><a href="#preis">Preis</a><a href="#faq">FAQ</a></div>
+    <div class="col"><h2>Hilfe</h2><a href="support.html">Support</a><a href="mailto:zapio.app@proton.me">E-Mail schreiben</a></div>
+    <div class="col"><h2>Rechtliches</h2><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    <div class="col"><h2>Sprache</h2><a href="en/" lang="en" hreflang="en">English</a></div>
+  </div>
+  <div class="legal"><p>Zapio ist ein Abspielprogramm und bietet selbst keine Sender, Filme oder Serien an. Für eigene Inhalte brauchst du eine Playlist oder einen Zugang deines Anbieters. Zum Ausprobieren gibt es eine eingebaute Demo mit öffentlichen Teststreams und vier offenen Filmen.</p><p>Demo‑Filme Sintel, Tears of Steel, Big Buck Bunny und Elephants Dream: © Blender Foundation | blender.org, Lizenz <a href="https://creativecommons.org/licenses/by/3.0/deed.de">CC BY 3.0</a> (Elephants Dream: <a href="https://creativecommons.org/licenses/by/2.5/deed.de">CC BY 2.5</a>).</p><p>Apple, iPhone, Apple TV, AirPlay, Face ID, iCloud, Siri, Spotlight, tvOS und App Store sind Marken der Apple Inc., eingetragen in den USA und anderen Ländern. iOS ist eine Marke oder eingetragene Marke von Cisco in den USA und anderen Ländern und wird unter Lizenz verwendet. VLC ist eine Marke von VideoLAN. Zapio nutzt MobileVLCKit (LGPL) und steht in keiner Verbindung zu VideoLAN oder Apple.</p><p>© 2026 Andreas Klundt</p></div>
+</div>
+</footer>
+<script>
+(function(){var w=window,d=document,de=d.documentElement;
+function all(){d.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in');});}
+if(de.classList.contains('js')){
+var got=false;
+var io=new IntersectionObserver(function(es){got=true;es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:0});
+d.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+var check=function(){var h=w.innerHeight;d.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<h)el.classList.add('in');});};
+w.addEventListener('scroll',check,{passive:true});
+w.addEventListener('hashchange',all);w.addEventListener('beforeprint',all);w.addEventListener('pageshow',check);
+d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="#"]');if(a)all();});
+if(w.location.hash)all();
+setTimeout(function(){if(!got)all();else check();},1200);
+setTimeout(check,3000);
+}
+var sc=d.querySelector('.cards'),pg=d.querySelector('.pager');
+if(sc&&pg&&sc.children.length>1){
+var cards=[].slice.call(sc.children),dots=pg.querySelector('.dots'),prev=pg.querySelector('.prev'),next=pg.querySelector('.next');
+var step=function(){return cards[1].offsetLeft-cards[0].offsetLeft;};
+var idx=function(){return Math.max(0,Math.min(cards.length-1,Math.round(sc.scrollLeft/step())));};
+var smooth=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+var go=function(i){i=Math.max(0,Math.min(cards.length-1,i));sc.scrollTo({left:i*step(),behavior:smooth});};
+cards.forEach(function(c,i){var b=d.createElement('button');b.type='button';b.setAttribute('aria-label',(c.querySelector('h3')||{}).textContent||String(i+1));b.addEventListener('click',function(){go(i);});dots.appendChild(b);});
+var sync=function(){var i=idx(),end=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;if(end)i=cards.length-1;[].forEach.call(dots.children,function(b,k){b.setAttribute('aria-current',k===i?'true':'false');});prev.disabled=sc.scrollLeft<4;next.disabled=end;};
+sc.addEventListener('scroll',sync,{passive:true});
+prev.addEventListener('click',function(){go(idx()-1);});next.addEventListener('click',function(){go(idx()+1);});
+sc.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1);}else if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1);}});
+w.addEventListener('resize',sync);pg.hidden=false;sync();}
+})();
+</script>
 </body>
 </html>

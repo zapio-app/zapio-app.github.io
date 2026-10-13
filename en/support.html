@@ -2,113 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Support – Zapio</title>
-<meta name="description" content="Zapio turns your IPTV subscription into a real TV experience: channels switch in a fraction of a second, a programme guide that thinks ahead, and movies and series as clear as in the TV app.">
-<meta name="theme-color" content="#05070d">
-<meta property="og:title" content="Zapio – Television, the way it should be.">
-<meta property="og:description" content="Zapio turns your IPTV subscription into a real TV experience: channels switch in a fraction of a second, a programme guide that thinks ahead, and movies and series as clear as in the TV app.">
-<meta property="og:image" content="https://zapio-app.github.io/img/og.jpg">
-<link rel="icon" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
-<style>
-:root { color-scheme: dark; --bg:#05070d; --text:#f3f5fb; --muted:#9ba4b9; --soft:#c9cfdd; --accent:#5b8cff; --accent2:#9a6bff;
-        --card:rgba(255,255,255,.035); --card2:rgba(255,255,255,.06); --line:rgba(255,255,255,.09); --radius:22px; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; color:var(--text); background:var(--bg);
-       background-image: radial-gradient(1200px 700px at 75% -10%, rgba(91,140,255,.22), transparent 60%),
-                         radial-gradient(900px 600px at -10% 20%, rgba(154,107,255,.12), transparent 60%);
-       background-repeat:no-repeat; font:17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-       -webkit-font-smoothing:antialiased; }
-a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
-/* Navigation */
-.nav { position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(18px); -webkit-backdrop-filter:saturate(180%) blur(18px);
-       background:rgba(5,7,13,.72); border-bottom:1px solid var(--line); }
-.nav .wrap { display:flex; align-items:center; gap:14px; height:64px; }
-.brand { display:flex; align-items:center; gap:10px; color:var(--text); font-weight:700; font-size:19px; letter-spacing:-.01em; }
-.brand:hover { text-decoration:none; } .brand img { width:30px; height:30px; border-radius:8px; }
-.nav nav { margin-left:auto; display:flex; gap:22px; font-size:15px; flex-wrap:wrap; }
-.nav nav a { color:var(--muted); } .nav nav a:hover, .nav nav a.active { color:var(--text); text-decoration:none; }
-/* Hero */
-.hero { display:grid; grid-template-columns:1.05fr 1fr; gap:40px; align-items:center; padding:72px 0 40px; }
-.eyebrow { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:var(--card2);
-           border:1px solid var(--line); color:var(--soft); font-size:14px; font-weight:500; }
-.eyebrow .dot { width:8px; height:8px; border-radius:50%; background:#3ddc84; box-shadow:0 0 12px #3ddc84; }
-h1.title { font-size:clamp(42px,6vw,74px); line-height:1.02; letter-spacing:-.035em; margin:22px 0 18px; font-weight:800;
-           background:linear-gradient(180deg,#fff 30%,#b9c6ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.lead { font-size:clamp(18px,2vw,21px); color:var(--soft); max-width:540px; margin:0 0 30px; }
-.buttons { display:flex; gap:12px; flex-wrap:wrap; }
-.btn { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:14px; font-weight:600; font-size:16px; }
-.btn:hover { text-decoration:none; } .btn.primary { background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; box-shadow:0 10px 30px rgba(91,140,255,.35); }
-.btn.ghost { background:var(--card2); color:var(--text); border:1px solid var(--line); }
-.phones { position:relative; height:620px; isolation:isolate; }
-.phone { position:absolute; width:250px; border-radius:42px; padding:9px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-         box-shadow:0 30px 80px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.phone img { display:block; width:100%; border-radius:34px; }
-.phone.p1 { left:0; top:70px; transform:rotate(-7deg); } .phone.p2 { left:50%; top:0; transform:translateX(-50%); z-index:2; width:270px; }
-.phone.p3 { right:0; top:70px; transform:rotate(7deg); }
-/* Sections */
-section.block { padding:80px 0; } .kicker { color:var(--accent); font-weight:600; font-size:15px; letter-spacing:.02em; text-transform:uppercase; }
-h2.head { font-size:clamp(32px,4.2vw,52px); line-height:1.08; letter-spacing:-.03em; margin:10px 0 16px; font-weight:800; }
-.sub { color:var(--soft); font-size:19px; max-width:640px; }
-.center { text-align:center; } .center .sub { margin:0 auto; }
-.row { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:56px 0; }
-.row.flip .media { order:2; }
-.row .media { display:flex; justify-content:center; position:relative; isolation:isolate; }
-.row .media:before, .phones:before { content:""; position:absolute; z-index:-1; inset:12% 8%; border-radius:50%;
-  background:radial-gradient(closest-side, rgba(91,140,255,.38), rgba(154,107,255,.12) 60%, transparent); filter:blur(30px); }
-.row .media .phone { position:relative; width:270px; transform:none; }
-.row h3 { font-size:clamp(26px,3vw,36px); letter-spacing:-.02em; margin:8px 0 12px; line-height:1.15; }
-.row p { color:var(--soft); font-size:18px; margin:0 0 14px; }
-.ticks { list-style:none; padding:0; margin:16px 0 0; } .ticks li { padding-left:30px; position:relative; margin:9px 0; color:var(--soft); }
-.ticks li:before { content:""; position:absolute; left:0; top:7px; width:18px; height:18px; border-radius:6px;
-                   background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-mask:none; }
-.ticks li:after { content:""; position:absolute; left:6px; top:10px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
-.wide { margin-top:44px; border-radius:30px; padding:10px; background:linear-gradient(160deg,#2a2f3d,#0d1018);
-        box-shadow:0 40px 100px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08); }
-.wide img { display:block; width:100%; border-radius:22px; }
-.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
-.tile { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
-.tile .ico { width:46px; height:46px; border-radius:13px; display:grid; place-items:center; margin-bottom:16px; color:#fff; }
-.tile .ico svg { width:24px; height:24px; } .tile h4 { margin:0 0 6px; font-size:19px; } .tile p { margin:0; color:var(--muted); font-size:16px; }
-.c1 { background:linear-gradient(135deg,#3b82f6,#2563eb); } .c2 { background:linear-gradient(135deg,#a855f7,#7c3aed); }
-.c3 { background:linear-gradient(135deg,#f97316,#ea580c); } .c4 { background:linear-gradient(135deg,#22c55e,#16a34a); }
-.c5 { background:linear-gradient(135deg,#ec4899,#db2777); } .c6 { background:linear-gradient(135deg,#06b6d4,#0891b2); }
-.price { margin-top:20px; border-radius:30px; padding:56px 40px; text-align:center; border:1px solid var(--line);
-         background:radial-gradient(600px 300px at 50% 0%, rgba(91,140,255,.25), transparent 70%), var(--card); }
-.price .big { font-size:clamp(34px,5vw,60px); font-weight:800; letter-spacing:-.03em; margin:8px 0 10px; }
-.pills { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:26px; }
-.pills span { padding:9px 16px; border-radius:999px; background:var(--card2); border:1px solid var(--line); color:var(--soft); font-size:15px; }
-.tv { color:var(--soft); font-size:15px; margin-top:22px; }
-.note { color:var(--muted); font-size:14px; max-width:760px; margin:26px auto 0; text-align:center; }
-/* Rechtliches */
-.doc { max-width:780px; margin:56px auto 80px; padding:48px clamp(22px,5vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; }
-.doc h1 { font-size:clamp(28px,4vw,44px); hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; letter-spacing:-.03em; line-height:1.1; margin:0 0 18px; }
-.doc h2 { font-size:22px; margin:38px 0 10px; letter-spacing:-.01em; } .doc h3 { font-size:18px; margin:26px 0 6px; }
-.doc p, .doc li { color:var(--soft); } .doc ul { padding-left:22px; } .doc li { margin:7px 0; } .doc strong { color:var(--text); }
-.doc code { font:14px ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--card2); padding:2px 6px; border-radius:6px; }
-.doc table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; } .doc th, .doc td { text-align:left; padding:9px; border-bottom:1px solid var(--line); vertical-align:top; }
-.todo { background:#5c4400; color:#ffe9a8; border-radius:8px; padding:1px 6px; }
-footer { border-top:1px solid var(--line); margin-top:40px; }
-footer .wrap { display:flex; gap:24px; flex-wrap:wrap; align-items:center; padding:30px 24px 44px; color:var(--muted); font-size:14px; }
-footer nav { display:flex; gap:18px; flex-wrap:wrap; } footer a { color:var(--muted); } footer .credit { flex-basis:100%; font-size:13px; color:#6f778a; }
-@media (max-width: 900px) {
-  .hero { grid-template-columns:1fr; text-align:center; padding-top:48px; } .lead { margin-left:auto; margin-right:auto; } .buttons { justify-content:center; }
-  .phones { height:520px; max-width:520px; margin:0 auto; width:100%; } .phone { width:200px; } .phone.p2 { width:220px; }
-  .row { grid-template-columns:1fr; gap:28px; text-align:center; } .row.flip .media { order:0; } .ticks { display:inline-block; text-align:left; }
-  .grid { grid-template-columns:1fr 1fr; } .nav nav { gap:14px; font-size:14px; }
-}
-@media (max-width: 560px) { .wrap { padding:0 16px; } section.block { padding:48px 0; } .row { padding:32px 0; }
-  .doc { margin:28px auto 48px; padding:30px 20px; border-radius:22px; } .grid { grid-template-columns:1fr; } .phone.p1, .phone.p3 { display:none; } .phones { height:470px; } .nav nav a.hide-s { display:none; } }
-</style>
+<meta name="description" content="Help with Zapio: adding your account, one-stream accounts, Picture in Picture, restoring a purchase and contact by email.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://zapio-app.github.io/en/support.html">
+<link rel="alternate" hreflang="de" href="https://zapio-app.github.io/support.html">
+<link rel="alternate" hreflang="en" href="https://zapio-app.github.io/en/support.html">
+<link rel="alternate" hreflang="x-default" href="https://zapio-app.github.io/support.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zapio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:title" content="Support – Zapio">
+<meta property="og:description" content="Help with Zapio: adding your account, one-stream accounts, Picture in Picture, restoring a purchase and contact by email.">
+<meta property="og:url" content="https://zapio-app.github.io/en/support.html">
+<meta property="og:image" content="https://zapio-app.github.io/img/og-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zapio in landscape with the built-in demo: live player with a still from Big Buck Bunny, info card and channel bar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Support – Zapio">
+<meta name="twitter:description" content="Help with Zapio: adding your account, one-stream accounts, Picture in Picture, restoring a purchase and contact by email.">
+<meta name="twitter:image" content="https://zapio-app.github.io/img/og-en.jpg">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../favicon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="../icon.png" alt="">Zapio</a><nav><a href="index.html#funktionen" class="hide-s">Features</a><a href="support.html" class="active">Support</a><a href="privacy.html" class="hide-s">Privacy</a><a href="../support.html" lang="de">Deutsch</a></nav></div></header>
-<main><div class="wrap"><article class="doc"><h1>Support</h1><p>Questions, problems or ideas? Write to <a href="mailto:zapio.app@proton.me">zapio.app@proton.me</a> – we usually reply within two working days. Many answers are also in the app under Settings → “Help and Tips”.</p><h2>Frequently asked questions</h2><h3>How do I add my account?</h3><p>On first launch choose “Add source”: paste a playlist link (M3U) or enter the server, user name and password of an Xtream account. Zapio detects the type. No account yet? Use “Try with free channels”.</p><h3>Switching says “account in use on another device”.</h3><p>Most accounts allow one stream at a time. If something plays on another device, the provider blocks. On iPhone a common cause is iCloud Private Relay: turn off “Limit IP Address Tracking” for your Wi-Fi. A VPN can interfere as well.</p><h3>Sound but no picture.</h3><p>Some channels use a format Apple’s player cannot show. Zapio then switches to its built-in VLC player automatically.</p><h3>Why is there no Picture in Picture for some movies?</h3><p>Picture in Picture and AirPlay work with Apple’s player (MP4, HLS). MKV files play through VLC, which has no Picture in Picture. If a movie also exists as MP4, Zapio picks that version.</p><h3>Restore purchase</h3><p>New device or reinstalled: Settings → Full Version → “Restore Purchase”. It applies to the Apple ID used for the purchase.</p><h3>Report a problem</h3><p>In the app: Settings → Diagnostics → “Copy result” and send it to us. User name and password are replaced by placeholders.</p></article></div></main>
-<footer><div class="wrap"><a class="brand" href="index.html"><img src="../icon.png" alt="">Zapio</a>
-<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="imprint.html">Imprint</a></nav>
-<span>© 2026 Zapio</span><span class="credit">Images from the open movies Sintel, Tears of Steel and Big Buck Bunny: © Blender Foundation | blender.org (CC BY). Apple, iPhone and App Store are trademarks of Apple Inc.</span></div></footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap wrap-wide">
+<a class="brand" href="../en/"><img src="../favicon-64.png" width="26" height="26" alt="">Zapio</a>
+<nav aria-label="Main navigation"><ul><li class="hide-s"><a href="../en/#funktionen">Features</a></li><li class="hide-s"><a href="../en/#preis">Pricing</a></li><li><a href="../en/support.html" aria-current="page">Support</a></li><li class="hide-s"><a href="../en/#faq">FAQ</a></li><li><a class="lang" href="../support.html" lang="de" hreflang="de">Deutsch</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="support"><div class="page-head"><div class="wrap sup-grid"><div><p class="kicker">Help</p><h1>Support</h1><p class="lead">Questions, problems or ideas? Write to <a href="mailto:zapio.app@proton.me">zapio.app@proton.me</a> – we reply as soon as we can. Many answers are also in the app under Settings → “Help & Tips”.</p><div class="contact"><a class="btn" href="mailto:zapio.app@proton.me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email us</a></div></div><div class="help"><div><h2>Read it in the app</h2><p>Settings → “Help &amp; Tips”: searchable answers about accounts, switching channels, catch-up, downloads and parental controls.</p></div><div><h2>Describe the problem precisely</h2><p>Settings → Diagnostics → “Copy Result” and paste it into your email. Login details are replaced by placeholders.</p></div></div></div></div><div class="wrap"><div class="sup-faq"><h2 class="faq-h">Frequently asked questions</h2><div class="faq-list"><details><summary>How do I add my account?</summary><p>On first launch choose “Add source”: paste a playlist link (M3U) or enter the server, user name and password of an Xtream account. Zapio detects the type. No account yet? Use “Try with free channels”.</p></details><details><summary>Switching says “account in use on another device”.</summary><p>Many accounts allow only one stream at a time. If something plays on another device, the provider blocks. On iPhone a common cause is iCloud Private Relay: turn off “Limit IP Address Tracking” for your Wi-Fi network under Settings → Wi-Fi → ⓘ. A VPN can interfere as well.</p></details><details><summary>Sound but no picture.</summary><p>Some channels use a format Apple’s player cannot show. Zapio then switches to its built-in VLC player automatically.</p></details><details><summary>Why is there no Picture in Picture for some movies?</summary><p>Picture in Picture and AirPlay work with Apple’s player (MP4, HLS). MKV files play through VLC, which has no Picture in Picture. If a movie also exists as MP4, Zapio picks that version.</p></details><details><summary>Restore purchase</summary><p>New device or reinstalled: Settings → Full version → “Restore purchase”. It applies to the Apple Account used for the purchase.</p></details><details><summary>Report a problem</summary><p>In the app: Settings → Diagnostics → “Copy Result” and send it to us. User name and password are replaced by placeholders.</p></details></div></div></div></div>
+</main>
+<footer>
+<div class="wrap wrap-wide">
+  <div class="top">
+    <div class="brandcol"><a class="brand" href="../en/"><img src="../favicon-64.png" width="24" height="24" alt="">Zapio</a><p class="tag">Your TV. On iPhone.</p></div>
+    <div class="col"><h2>Product</h2><a href="../en/#funktionen">Features</a><a href="../en/#preis">Pricing</a><a href="../en/#faq">FAQ</a></div>
+    <div class="col"><h2>Help</h2><a href="../en/support.html" aria-current="page">Support</a><a href="mailto:zapio.app@proton.me">Email us</a></div>
+    <div class="col"><h2>Legal</h2><a href="../en/imprint.html">Imprint</a><a href="../en/privacy.html">Privacy</a></div>
+    <div class="col"><h2>Language</h2><a href="../support.html" lang="de" hreflang="de">Deutsch</a></div>
+  </div>
+  <div class="legal"><p>Zapio is a media player and does not offer any channels, movies or series itself. For your own content you need a playlist or a provider account. To try it out, there is a built-in demo with public test streams and four open movies.</p><p>Demo movies Sintel, Tears of Steel, Big Buck Bunny and Elephants Dream: © Blender Foundation | blender.org, licensed <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (Elephants Dream: <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>).</p><p>Apple, iPhone, Apple TV, AirPlay, Face ID, iCloud, Siri, Spotlight, tvOS and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. IOS is a trademark or registered trademark of Cisco in the U.S. and other countries and is used under license. VLC is a trademark of VideoLAN. Zapio uses MobileVLCKit (LGPL) and is not affiliated with VideoLAN or Apple.</p><p>© 2026 Andreas Klundt</p></div>
+</div>
+</footer>
+
 </body>
 </html>
